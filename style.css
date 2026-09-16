@@ -155,6 +155,28 @@ a:hover {
 /* Targets the specific card on the About page */
 /* --- About Me Card Horizontal Layout --- */
 
+/* Mobile Responsive Layout (Screens 768px or smaller) */
+/* Mobile Responsive Layout (Screens 768px or smaller) */
+@media (max-width: 768px) {
+  /* Targets both header structures */
+  .profile-header,
+  .about-card {
+    display: flex !important;
+    flex-direction: column !important; /* Forces vertical stacking */
+    align-items: center !important;     /* Centers avatar horizontally */
+    text-align: center !important;
+  }
+
+  /* Ensures image is explicitly ordered first */
+  .profile-header img,
+  .profile-header .avatar,
+  .about-card img,
+  .about-card .avatar {
+    order: -1 !important;              /* Moves photo to top of flex layout */
+    margin-bottom: 1rem;
+  }
+}
+
 .about-card {
   display: flex;          
   flex-direction: row;     
@@ -187,6 +209,9 @@ a:hover {
   margin-top: 0;           /* Resets any previous margins */
   width: 220px;            /* Example larger size */
   height: 220px;
+  border-radius: 50%;     /* Cuts the square image into a perfect circle */
+  object-fit: cover;      /* Prevents the image from stretching if aspect ratio varies */
+  display: block;
   min-width: 160px;        /* Prevent image from shrinking */
 }
 
