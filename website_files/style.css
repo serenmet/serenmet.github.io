@@ -1,0 +1,357 @@
+/* Updated Purple Color Palette */
+:root {
+  --primary-color: #4a154b;    /* Deep regal purple for headings & nav background */
+  --secondary-color: #8e44ad;  /* Vibrant accent purple for hover states, links & buttons */
+  --text-color: #222222;
+  --bg-color: #faf8fc;       /* Very light lavender tint for background */
+  --card-bg: #ffffff;
+  --border-color: #e9dcf2;   /* Soft purple tint for borders */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Global Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  line-height: 1.35;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation Header */
+header {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+/* Page Layout Container */
+main {
+  max-width: 900px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  flex: 1;
+}
+
+.page-section {
+  display: none;
+  margin: 0 auto;
+}
+
+.page-section.active-section {
+  display: block;
+}
+
+/* Typography & Centered Narrow Column Rules (~10 words per line) */
+.column-text {
+  max-width: 36em;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+  margin-bottom: 1.25rem;
+}
+
+p {
+  margin-bottom: 0.85rem;
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.25rem;
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.4rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 0.25rem;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Profile / About Page Elements */
+/* .profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--secondary-color);
+} */
+
+/* --- About Me Card Horizontal Layout --- */
+
+/* Targets the specific card on the About page */
+/* --- About Me Card Horizontal Layout --- */
+
+.about-card {
+  display: flex;          
+  flex-direction: row;     
+  align-items: center;    /* Keeps the avatar vertically centered next to the text */
+  justify-content: flex-start; 
+  gap: 2rem;              
+  padding: 2rem;          
+}
+
+/* Text Container adjustments for About page */
+.about-text-container {
+  display: flex;
+  flex-direction: column;  /* Stack the individual paragraphs vertically */
+  flex: 1;                /* Allow the text block to take up the remaining space in the card */
+}
+
+/* Overrides the narrow column text rule from previous steps to allow full card width */
+.about-text-container .column-text {
+  max-width: 100%;          /* Uses the flex container width */
+}
+
+/* Ensure the text is properly aligned */
+.about-text-container p {
+  text-align: left;         /* Align left when next to an image */
+  margin-bottom: 0.75rem;   /* Compact line spacing */
+}
+
+/* Avatar positioning adjustments within About card */
+.about-card .avatar {
+  margin-top: 0;           /* Resets any previous margins */
+  width: 220px;            /* Example larger size */
+  height: 220px;
+  min-width: 160px;        /* Prevent image from shrinking */
+}
+
+/* Layout for Profile Header inside the Card */
+.profile-header {
+  display: flex;
+  flex-direction: row;        /* Avatar on left, text on right */
+  align-items: center;        /* Vertically centers image and text */
+  justify-content: flex-start;/* Aligns content to the left of the card */
+  gap: 1.5rem;                /* Space between picture and text */
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+/* Ensure text inside header aligns to the left */
+.profile-header div {
+  text-align: left;
+}
+
+/* Prevent heading underlines inside the header from expanding too wide */
+.profile-header h1 {
+  margin-bottom: 0.25rem;
+  border-bottom: none;        /* Removes section divider line on your name */
+}
+
+/* Avatar Styling */
+.avatar {
+  width: 120px;
+  height: 120px;
+  min-width: 120px;           /* Prevents image from shrinking on smaller screens */
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--secondary-color);
+}
+
+/* CV / Resume Styling */
+.cv-item {
+  max-width: 45em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.25rem;
+}
+
+.cv-meta {
+  font-size: 0.9rem;
+  color: #666666;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+/* Portfolio Layout - Centered Cards */
+.portfolio-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;          /* Centers each card horizontally */
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+
+.project-card {
+  width: 100%;
+  max-width: 45em;              /*Expanded width to match header proportions nicely */
+  margin: 0 auto;               /* Keeps cards centered */
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); /*// Subtle lift */
+}
+
+/* Ensure project images stay inside the card bounds */
+.project-card {
+  overflow: hidden; /* Clips any image edges extending beyond card corners */
+}
+
+.project-card img {
+  width: 100%;             /* Scales image to fit card width */
+  max-width: 100%;         /* Prevents image from expanding past card container */
+  height: auto;            /* Maintains original aspect ratio without distortion */
+  display: block;          /* Eliminates unwanted inline gap/padding beneath images */
+  border-radius: 4px;      /* Matches card corner aesthetics */
+  box-sizing: border-box;  /* Includes padding/borders in size calculations */
+}
+
+
+/* Allow text and lists inside cards to use full card width */
+.project-card .column-text {
+  max-width: 100%;
+  text-align: left;             /* Left-aligned for cleaner list and code readability */
+}
+/* Restrict project card text to ~10 words per line and center it */
+/* .project-card .column-text {
+  max-width: 36ch;          // Enforces ~10 words per line (~30 characters) 
+  //margin-left: auto;        // Centers text block horizontally 
+  //margin-right: auto;       // Centers text block horizontally 
+  text-align: justify;      // Keeps standard justified alignment 
+/* } */
+
+/* Ensure bullet points inside cards stay aligned within the 10-word column */
+.project-card .column-text ul {
+  padding-left: 1.2rem;
+  text-align: left;         /* Bullet lists read better left-aligned */
+} */
+
+.btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.btn:hover {
+  background-color: var(--secondary-color);
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #f1f5f9;
+  font-size: 0.85rem;
+  color: #666666;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Properly Indented Bullet Lists */
+.column-text ul {
+  padding-left: 1.5rem;          /* Indents bullets relative to paragraph text */
+  list-style-position: outside;  /* Keeps multi-line text neatly aligned to the right of the bullet */
+  margin-bottom: 0.75rem;
+}
+
+.column-text li {
+  margin-bottom: 0.4rem;
+}
+
+/* Code Block Styling */
+.code-block {
+  background-color: #1e1e2e;
+  color: #a6adc8;
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin: 1rem 0 1.25rem 0;
+  border: 1px solid var(--border-color);
+}
+
+.code-block code {
+  color: #cdd6f4;
+}
+
+.center-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* Optional: Ensures the image doesn't overflow smaller screens */
+  max-width: 100%; 
+  height: auto;
+}

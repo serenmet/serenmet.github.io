@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serenity — Projects & Resume</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="nav-container">
+      <div class="logo">Serenity M</div>
+      <nav>
+        <ul>
+          <li><a href="#about" class="nav-link active">About Me</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ABOUT ME SECTION -->
+  <section id="about" class="page-section active-section">
+    <h1>About Me</h1>
+    
+    <div class="project-card about-card"> <!-- Added the about-card class -->
+      <img src="images/closerme.png" alt="Image of Serenity" class="avatar">
+      
+      <!-- This wrapper div is essential to keep all paragraphs aligned together as one unit on the right -->
+      <div class="about-text-container"> 
+        <div class="column-text">
+          <p>Hi, I'm Serenity! I am a senior at the University of Michigan, studying computer science. I am passionate about creating technology that works for people. </p>
+          
+          <p>In the past, I have built embedded software using C++, including driver code for hardware sensors, which gave me hands-on experience with hardware-software interaction and creating clean, efficient code. </p>
+          
+          <p>Beyond my professional interests, I enjoy spending time with friends and family, playing video games, and crocheting. I'm always looking for new ways to build and improve things.</p>
+        </div>
+      </div> <!-- End about-text-container -->
+    </div>
+  </section>
+
+<!-- RESUME / CV SECTION -->
+    <section id="resume" class="page-section">
+      <h1>Resume</h1>
+
+      <div class="project-card">
+      <div class="column-text">
+        <p><strong>Serenity M.</strong> | <a href="mailto:email@gmail.com">email@gmail.com</a></p>
+        <!-- <p>A comprehensive overview of academic background, engineering project experience, leadership roles, and technical skills.</p> -->
+      </div>
+
+      <h2>Education</h2>
+      <div class="cv-item">
+        <h3>Bachelor of Science in Engineering in Computer Science</h3>
+        <span class="cv-meta">University of Michigan, Ann Arbor, MI | Anticipated May 2027</span>
+        <div class="column-text">
+          <p><strong>GPA:</strong> 3.751</p>
+          <p><strong>Relevant Coursework:</strong> Data Structures and Algorithms, Software Engineering, Operating Systems.</p>
+        </div>
+      </div>
+
+      <h2>Technical Skills</h2>
+      <div class="column-text">
+        <p><strong>Languages & Tools:</strong> C++, Python, MATLAB, Git.</p>
+      </div>
+
+      <h2>Project Experience</h2>
+      <div class="cv-item">
+        <h3>Embedded Software Team Member</h3>
+        <span class="cv-meta">Michigan Mars Rover Team | September 2025 – Present</span>
+        <div class="column-text">
+          <p>Designed and implemented driver programs in C++ that collected sensor data used for mission-critical operations on the rover. Developed Python scripts to enable fast and accurate data collection, and assisted with thorough testing to verify sensor accuracy and consistency.</p>
+          <p><em>View related work in the <a href="#project-rover" onclick="navigateToSection('projects')">Mars Rover Embedded Systems Project</a>.</em></p>
+        </div>
+      </div>
+
+      <h2>Work Experience</h2>
+      <div class="cv-item">
+        <h3>Stacks Assistant</h3>
+        <span class="cv-meta">Harlan Hatcher Graduate Library, Ann Arbor, MI | September 2024 – Present</span>
+        <div class="column-text">
+          <p>Contributed to large-scale shifts of books to enhance space for future library growth while completing work independently with minimal supervision.</p>
+        </div>
+      </div>
+
+      <div class="cv-item">
+        <h3>Produce Associate</h3>
+        <span class="cv-meta">Family Fare, Byron Center, MI | June 2023 – May 2024</span>
+        <div class="column-text">
+          <p>Maintained a well-stocked inventory by refilling and rotating items. Pleasantly greeted customers and assisted with inquiries.</p>
+        </div>
+      </div>
+
+      <h2>Leadership Experience</h2>
+      <div class="cv-item">
+        <h3>Human Resources Director</h3>
+        <span class="cv-meta">University of Michigan Science Olympiad | April 2024 – Present</span>
+        <div class="column-text">
+          <p>Organized multiple large tournaments by ensuring all volunteers were adequately prepared and background checked. Managed documentation for 1,000+ students and 500+ volunteers using Google Sheets. Facilitated timely problem resolution, cutting event delays by 15 minutes while maintaining high group satisfaction.</p>
+        </div>
+      </div>
+
+      <div class="cv-item">
+        <h3>Squad Leader in Training</h3>
+        <span class="cv-meta">Gates Scholarship | May 2024 – June 2024</span>
+        <div class="column-text">
+          <p>Mentored a cohort of scholars during a large-scale conference by providing guidance, support, and fostering active engagement. Facilitated meaningful discussions during mealtimes to encourage connection and collaboration.</p>
+        </div>
+      </div>
+
+      <h2>Honors & Achievements</h2>
+      <div class="column-text">
+        <p><strong>Dean’s Honor List:</strong> Fall 2023 – Winter 2026</p>
+        <p><strong>University Honors:</strong> Fall 2023, Fall 2024 – Winter 2026</p>
+        <p><strong>Scholarships & Awards:</strong> Gates Scholar (Cohort VI), LEAD Scholar, HAIL Scholar.</p>
+      </div>
+
+      <h2>Activities</h2>
+      <div class="column-text">
+        <p><strong>University of Michigan Science Olympiad:</strong> September 2023 – Present</p>
+        <p><strong>Girls in Electrical Engineering and Computer Science (GEECS):</strong> October 2023 – Present</p>
+        <p><strong>First Generation Engineers:</strong> August 2023 – Present</p>
+      </div>
+    </div>
+    </section>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="projects" class="page-section">
+      <h1>Projects</h1>
+
+      <!-- <div class="column-text">
+        <p>Below is a curated showcase of featured technical projects demonstrating end-to-end web engineering, UI development, and API integration.</p>
+      </div> -->
+
+      <div class="project-grid">
+
+        <!-- Project 1 -->
+        <article id="project-sensor" class="project-card">
+          <img src="images/mrover.webp" alt="Image of the Michigan Mars Rover from 2026" class="center-image">
+          <h2>MRover Sensor Driver Code</h2>
+          <div class="column-text">
+            <ul>
+              <li>Engineered asynchronous, interrupt-driven C++ sensor drivers using STM32 HAL library routines over I2C memory operations.</li>
+              <li>Implemented non-blocking sensor readout algorithms and automated error recovery protocols to handle hardware communication drops smoothly.</li>
+              <li>Processed raw high/low register data into scaled physical units (PPM) for mission-critical rover telemetry.</li>
+            </ul>
+          </div>
+          <p><strong>Skills:</strong> C++, C</p>
+          <!-- <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub &rarr;</a> -->
+        </article>
+
+        <!-- Project 2 -->
+        <article id="project-pitchPerfect" class="project-card">
+          <img src="images/pitchPerfect.png" alt="Pitch Perfect Image Showing Home Screen, Microprocessor, Keyboard Layout" class="center-image">
+          <h2>Pitch Perfect: Interactive Music Education Toy</h2>
+
+          <div class="column-text">
+            <ul>
+              <li> Orchestrated low-level software communication across display monitors, speakers, microphones, keyboards, SD cards, and SDRAM.</li>
+              <li> Engineered a free-play "Sandbox Mode" piano interface alongside an algorithmic "Pitch Recognition Mode" sampling random notes across a full octave.</li>
+              <li> Implemented responsive scoring and life-tracking algorithms with non-blocking menu state machine transitions.</li>
+            </ul>
+          </div>
+          <p><strong>Skills:</strong> E100 (Custom Assembly Language), Hardawre Input </p>
+          <!-- <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub &rarr;</a> -->
+        </article>
+
+        <!-- Project 3 -->
+        <article id="project-ecommerce" class="project-card">
+          <img src="images/euchreScreenshot.png" alt="Screenshot from programmed euchre output">
+          <h2>Euchre Card Game</h2>
+
+          <div class="column-text">
+            <ul>
+              <li>Structured core game mechanics—including Deck, Card, Hand, and Player abstractions—using clean C++ class design and inheritance.</li>
+              <li>Programmed rule-based heuristic strategies enabling artificial players to evaluate hand strength, make trump calls, and execute optimal card plays.</li>
+              <li> Built full game loop mechanics handling trick evaluation, bower ranking logic, score tracking, and seamless human vs. AI turn execution.</li>
+            </ul>
+          <p><strong>Skills:</strong> C++, Object Oriented Programing, Polymorphism</p>
+          <!-- <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="btn">View on GitHub &rarr;</a> -->
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Serenity. Built with GitHub Pages.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
